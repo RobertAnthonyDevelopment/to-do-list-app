@@ -24,17 +24,6 @@ This is a simple **To-Do List** application built using **Kotlin** and **Jetpack
 - **ReminderReceiver**: Broadcast receiver that triggers reminders for tasks.
 - **SharedPreferences**: Used to store and load tasks locally on the device.
 
-## Screenshots
-
-Here are some screenshots of the app in action:
-
-1. ![App Display 1](images/1-app-display.png)
-2. ![App Display 2](images/2-app-display.png)
-3. ![App Display 3](images/3-app-display.png)
-4. ![App Display 4](images/4-app-display.png)
-5. ![App Display 5](images/5-app-display.png)
-6. ![App Display 6](images/6-app-display.png)
-7. ![App Display 7](images/7-app-display.jpeg)
 
 ## How to Run
 
@@ -91,10 +80,17 @@ data class Task(
       }
   }
   ```
+## Current App:
 
-## Screenshots
+Here are some screenshots of the app in action:
 
-_Include screenshots of your app here to showcase the UI._
+1. ![App Display 1](images/1-app-display.png)
+2. ![App Display 2](images/2-app-display.png)
+3. ![App Display 3](images/3-app-display.png)
+4. ![App Display 4](images/4-app-display.png)
+5. ![App Display 5](images/5-app-display.png)
+6. ![App Display 6](images/6-app-display.png)
+7. ![App Display 7](images/7-app-display.jpeg)
 
 ## Contributing
 
