@@ -97,3 +97,5 @@ Here are some screenshots of the app in action:
 Feel free to contribute to this project by submitting pull requests or issues.
 
 ## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
