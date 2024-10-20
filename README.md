@@ -81,10 +81,6 @@ data class Task(
   }
   ```
 
-## Screenshots
-
-_Include screenshots of your app here to showcase the UI._
-
 ## Contributing
 
 Feel free to contribute to this project by submitting pull requests or issues.
