@@ -41,3 +41,63 @@ Here are some screenshots of the app in action:
 1. Clone the repository:
    ```bash
    git clone git@github.com:RobertAnthonyDevelopment/to-do-list-app.git
+   ```
+
+2. Open the project in **Android Studio**.
+
+3. Build and run the project on an Android device or emulator.
+
+## Key Components
+
+### Task Data Model
+
+```kotlin
+data class Task(
+    val description: String,
+    val priority: String,
+    val deadline: String,
+    val isRecurring: String,
+    val daysOfWeek: List<String> = emptyList(),
+    var isCompleted: Boolean
+)
+```
+
+### Main Features
+
+- **Task Management**: Users can add tasks with a description, priority (High, Medium, Low), and set deadlines.
+- **Recurring Options**: Tasks can be marked as recurring either daily or weekly with selected days of the week.
+- **Reminders**: The app uses the Android AlarmManager to trigger notifications for tasks based on their deadline and time.
+- **Persistent Data**: Tasks are stored in SharedPreferences as JSON.
+
+### Persistent Storage Example
+
+- **Saving Tasks**:
+  ```kotlin
+  fun saveTasks(preferences: SharedPreferences, gson: Gson, tasks: List<Task>) {
+      val jsonString = gson.toJson(tasks)
+      preferences.edit().putString("tasks", jsonString).apply()
+  }
+  ```
+
+- **Loading Tasks**:
+  ```kotlin
+  fun loadTasks(preferences: SharedPreferences, gson: Gson): List<Task> {
+      val jsonString = preferences.getString("tasks", null)
+      return if (jsonString != null) {
+          val type = object : TypeToken<List<Task>>() {}.type
+          gson.fromJson(jsonString, type)
+      } else {
+          emptyList()
+      }
+  }
+  ```
+
+## Screenshots
+
+_Include screenshots of your app here to showcase the UI._
+
+## Contributing
+
+Feel free to contribute to this project by submitting pull requests or issues.
+
+## License
